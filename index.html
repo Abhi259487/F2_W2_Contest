@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Excalidraw</title>
+    <link rel="shortcut icon" href="./images/Favicon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+  </head>
+  <body>
+    <div id="root">
+      <div id="top">
+        <button class="material-icons menu btn" onclick="toggleMenu()">
+          menu
+        </button>
+        <div class="options" id="actionbuttons">
+          <button class="btn material-symbols-outlined" id="lock">
+            lock_open_right
+          </button>
+          <div class="vertical-line"></div>
+          <button class="btn material-symbols-outlined" id="hand">
+            pan_tool
+          </button>
+          <button class="btn material-symbols-outlined">left_click</button>
+          <button
+            id="rectangle"
+            class="btn material-symbols-outlined"
+            onclick="onActionClick(this)"
+          >
+            check_box_outline_blank
+          </button>
+          <button class="btn material-symbols-outlined" id="diamond">
+            stat_0
+          </button>
+          <button
+            id="circle"
+            class="btn material-symbols-outlined"
+            onclick="onActionClick(this)"
+          >
+            brightness_1
+          </button>
+          <button class="btn material-symbols-outlined">arrow_right_alt</button>
+          <button
+            onclick="onActionClick(this)"
+            class="btn material-symbols-outlined"
+            id="line"
+          >
+            horizontal_rule
+          </button>
+          <button
+            class="btn material-icons"
+            id="freehand"
+            onclick="onActionClick(this)"
+          >
+            edit
+          </button>
+          <button class="btn material-symbols-outlined">text_format</button>
+          <button class="btn material-symbols-outlined">image</button>
+
+          <button
+            id="eraser"
+            class="btn material-symbols-outlined"
+            onclick="onActionClick(this)"
+          >
+            ink_eraser
+          </button>
+          <div class="vertical-line"></div>
+          <button class="btn material-symbols-outlined">
+            more_vert
+            </button>
+        </div>
+        <div class="top-right">
+          <button class="material-symbols-outlined" id="live-collaboration">
+            group
+            </button>
+           
+        </div>
+      </div>
+      <canvas id="canvas"></canvas>
+      
+   
+
+    <div class="form hide">
+      <label for="strokewidth">Stroke Width</label>
+      <input
+        type="range"
+        id="strokewidth"
+        name="strokewidth"
+        min="3"
+        max="10"
+        oninput="onInput(this)"
+      />
+      <label for="strokestyle">Stroke Color</label>
+      <input
+        type="color"
+        name="strokestyle"
+        id="strokestyle"
+        oninput="onInput(this)"
+      />
+    </div>
+         <div class="bottom-left">
+          <button class="btn zoom"><pre>-  100  +</pre></button>
+          <div class="option">
+          <button class="btn material-icons" id="undo">undo</button>
+          <button class="btn material-icons" id="redo">redo</button>
+        </div>
+        </div> 
+        <div class="bottom-right">
+          <span class="material-symbols-outlined">
+          verified_user
+          </span>
+          <button class="btn material-symbols-outlined">
+            help
+          </button>
+          </div>        
+     
+
+    <!-- <script src="./index.js"></script>
+    <script src="freehand.js"></script>
+    <script src="undoredo.js"></script> -->
+    <script src="state.js"></script>
+    <script src="drawing.js"></script>
+  </body>
+</html>

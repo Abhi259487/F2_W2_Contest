@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#root {
+  width: 100vw ;
+  height: 100vh;
+  overflow: hidden;
+  position: relative ;
+}
+#canvas {
+  /* cursor: crosshair; */
+  object-fit: contain;
+}
+
+#top {
+  position: absolute;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between !important;
+  z-index: 10;
+  padding: 10px;
+}
+#top > .options{ 
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+  border-radius: 10px;
+  padding: 4px 20px; 
+  box-shadow: 2px 2px 6px #E1E1E1;
+  height: 40px;
+}
+.menu {
+  background-color: #ECECF3;
+  border-radius: 4px;
+}
+.btn {
+  border: none ;
+  padding: 4px 6px; 
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 20px !important;
+}
+.btn:hover{
+  background-color: #ECECF3;
+  border-radius: 4px;
+}
+.vertical-line{
+  background-color: rgb(131, 131, 131) !important; 
+  width: 1px;
+  height: 1rem;
+  opacity: 0.2;
+}
+#diamond{
+  font-size: 30px !important;
+}
+.active {
+  background-color: #3a34eb;
+  border-radius: 4px;
+  color: white;
+}
+
+.form {
+  position: fixed;
+  left: 10px;
+  top: 30vh ;
+  border: 1px solid #ededed;
+  padding: 20px; 
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}
+#live-collaboration{
+ margin-right: 2rem;
+  background-color: #5b57d1;
+  color: white;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
+}
+.bottom-left{
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  z-index: 100;
+  display: flex;
+}
+.bottom-right{
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  z-index: 100;
+}
+.bottom-right>button{
+  background-color: #f1f0ff;
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+}
+.bottom-right>span{
+  background-color: #5b57d1;
+  color: white;
+  border-radius: 8px;
+  margin-inline: 1rem;
+}
+.zoom{
+  padding: 4px;
+  border: none;
+  border-radius: 8px;
+  width: 100px;
+  height: 40px;
+  font-size: 15px !important;
+  background-color: #f1f0ff;
+}
+.option{
+  background-color: #f1f0ff;
+  padding: 4px 10px;
+  border-radius: 8px;
+  margin-left: 0.5rem;
+}
